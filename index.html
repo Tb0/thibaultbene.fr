@@ -30,16 +30,22 @@
 	<!--[if lt IE 7.]>
 	<script defer type="text/javascript" src="js/pngfix.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+		$(document).keydown(function(e){
+  	  if (e.keyCode == 27) { 
+  	      hideContent(targeted_div)
+  	  }
+		});
+	</script>
 
 </head>
 <body>
-
 <br /><br />
 <img src="images/logo.jpg" alt="Logo Thibault Béné"/>
 <br /><center>
 
 
-<a href="#" onClick="ShowContent('project_info_me');  return true;">A Propos</a>
+<a href="#" onClick="showContent('project_info_me');  return true;">A Propos</a>
 <div class="loader" align="center" style="top:300px;z-index:1;background:#fff;width:100%;height:100%;color:#000;font-size:11px;font-style:italic;"><img src="images/ajax-loader2.gif" /><br />Chargement des images, veuillez patienter ...</div> 
 
 <div align="center" class="slider-wrap" style="width:956px;">
@@ -49,39 +55,39 @@
 		<!-- Bcf -->
 			<div class="panel" title="Projet Becomflex">
 				<div class="wrapper">
-					<div class="mac" onClick="ShowContent('project_info_1');return true;" onMouseOver="ShowContent('project_details_1');" onMouseOut="HideContent('project_details_1');">
+					<div class="mac" onClick="showContent('project_info_1');return true;" onMouseOver="showContent('project_details_1');" onMouseOut="hideContent('project_details_1');" >
 						<div id="project_details_1" class="project_details_container">
 							<div style="margin-top:5px;">Détails du projet</div>
 						</div>
 						<img src="images/work_becomflex.jpg" />
 					</div>	
-					<a href="#" onClick="ShowContent('project_info_1');  return true;">Détails du projet &#187;</a>
+					<a href="#" onClick="showContent('project_info_1');  return true;">Détails du projet &#187;</a>
 				</div>
 			</div>
 			
 		<!-- AR -->
 			<div class="panel" title="Projet L'Alternative-Rock">
 				<div class="wrapper">
-					<div class="mac" onClick="ShowContent('project_info_2');return true;" onMouseOver="ShowContent('project_details_2');" onMouseOut="HideContent('project_details_2');">
+					<div class="mac" onClick="showContent('project_info_2');return true;" onMouseOver="showContent('project_details_2');" onMouseOut="hideContent('project_details_2');">
 						<div id="project_details_2" class="project_details_container">
 							<div style="margin-top:5px;">Détails du projet</div>
 						</div>
 						<img src="images/work_ar.jpg" />
 					</div>	
-					<a href="#" onClick="ShowContent('project_info_2');  return true;">Détails du projet &#187;</a>
+					<a href="#" onClick="showContent('project_info_2');  return true;">Détails du projet &#187;</a>
 				</div>
 			</div>
 			
 		<!-- iPhotographisme -->
 			<div class="panel" title="Projet iPhotographisme">
 				<div class="wrapper">
-					<div class="mac" onClick="ShowContent('project_info_3');return true;" onMouseOver="ShowContent('project_details_3');" onMouseOut="HideContent('project_details_3');">
+					<div class="mac" onClick="showContent('project_info_3');return true;" onMouseOver="showContent('project_details_3');" onMouseOut="hideContent('project_details_3');">
 						<div id="project_details_3" class="project_details_container">
 							<div style="margin-top:5px;">Détails du projet</div>
 						</div>
 						<img src="images/work_iphotographisme.jpg" />
 					</div>	
-					<a href="#" onClick="ShowContent('project_info_3');  return true;">Détails du projet &#187;</a>
+					<a href="#" onClick="showContent('project_info_3');  return true;">Détails du projet &#187;</a>
 				</div>
 			</div>
 			
@@ -92,12 +98,12 @@
 
 
 <!-- Bcf -->
-<div id="project_info_1" class="project_info_container" >
+<div id="project_info_1" class="project_info_container">
 	<table class="project_info_table" cellpadding="0" cellspacing="0" height="100%">
 		<tr>
 		<td class="table_left"></td>
 		<td valign="top" class="table_right"  height="100%">
-			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="HideContent('project_info_1')"  style="cursor:pointer;float:right;" /><br /><br />
+			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="hideContent('project_info_1')"  style="cursor:pointer;float:right;" /><br /><br />
 		<div class="detail_divider">
 			<div class="detail_padding">
 			<h1>Becomflex</h1>
@@ -125,12 +131,12 @@
 
 
 <!-- AR -->
-<div id="project_info_2" class="project_info_container" >
+<div id="project_info_2" class="project_info_container">
 	<table class="project_info_table" cellpadding="0" cellspacing="0" height="100%">
 		<tr>
 		<td class="table_left"></td>
 		<td valign="top" class="table_right"  height="100%">
-			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="HideContent('project_info_2')"  style="cursor:pointer;float:right;" /><br /><br />
+			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="hideContent('project_info_2')"  style="cursor:pointer;float:right;" /><br /><br />
 		<div class="detail_divider">
 			<div class="detail_padding">
 			<h1>L'Alternative-Rock</h1>
@@ -157,12 +163,12 @@
 </div>
 
 <!-- iPhotographisme -->
-<div id="project_info_3" class="project_info_container" >
+<div id="project_info_3" class="project_info_container">
 	<table class="project_info_table" cellpadding="0" cellspacing="0" height="100%">
 		<tr>
 		<td class="table_left"></td>
 		<td valign="top" class="table_right"  height="100%">
-			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="HideContent('project_info_3')"  style="cursor:pointer;float:right;" /><br /><br />
+			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="hideContent('project_info_3')"  style="cursor:pointer;float:right;" /><br /><br />
 		<div class="detail_divider">
 			<div class="detail_padding">
 			<h1>iPhotographisme</h1>
@@ -197,7 +203,7 @@
 	<tr>
 		<td valign="top" class="table_left"></td>
 		<td valign="top" class="table_right">
-			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="HideContent('project_info_me')"  style="cursor:pointer;float:right;" /><br /><br />
+			<img src="images/_clickgrab.png" style="float:left;margin-top:4px;" /><img src="images/close.gif" onClick="hideContent('project_info_me')"  style="cursor:pointer;float:right;" /><br /><br />
 			<div class="detail_divider">
 				<div class="detail_padding">
 					<h2>Biographie</h2>
@@ -237,6 +243,7 @@ Drag.init(document.getElementById("images3")); // Image iPhotographisme
 Drag.init(document.getElementById("images13")); // Image de A propos.
 
 </script>
+
 </body>
 
 </html>
